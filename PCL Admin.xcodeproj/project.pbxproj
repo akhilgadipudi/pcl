@@ -28,6 +28,15 @@
 		AF5E5F0E22A4A898009D2EF0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E5F0D22A4A898009D2EF0 /* Location.swift */; };
 		AF8BE4EE22A81017004181AF /* pcladmin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE4EC22A81017004181AF /* pcladmin.xcdatamodeld */; };
 		AF8BE4F522A94AA9004181AF /* EditRouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE4F422A94AA9004181AF /* EditRouteCell.swift */; };
+		AF8BE4F722A96928004181AF /* RouteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE4F622A96928004181AF /* RouteDetailsViewController.swift */; };
+		AF8BE4F922A96B2A004181AF /* LocationStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE4F822A96B2A004181AF /* LocationStatusCell.swift */; };
+		AF8BE4FB22A99C91004181AF /* TimeCompare.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE4FA22A99C91004181AF /* TimeCompare.swift */; };
+		AF8BE4FD22AAA5D2004181AF /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE4FC22AAA5D2004181AF /* LocationHelper.swift */; };
+		AF8BE4FF22AAA9EA004181AF /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE4FE22AAA9EA004181AF /* MapAnnotation.swift */; };
+		AF8BE50122AAC509004181AF /* DriverDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE50022AAC509004181AF /* DriverDataHandler.swift */; };
+		AF8BE50322AAC7C7004181AF /* DriverLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE50222AAC7C6004181AF /* DriverLoginController.swift */; };
+		AF8BE50522AAD08E004181AF /* DriverRouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE50422AAD08E004181AF /* DriverRouteController.swift */; };
+		AF8BE50722AAE714004181AF /* DriverCustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8BE50622AAE714004181AF /* DriverCustomerController.swift */; };
 		AF9309C622A6A533002A221A /* AddLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9309C522A6A533002A221A /* AddLocationCell.swift */; };
 		AF9309C922A6AD66002A221A /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9309C822A6AD66002A221A /* DataHandler.swift */; };
 		AF9309CB22A6ADFE002A221A /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9309CA22A6ADFE002A221A /* Driver.swift */; };
@@ -79,6 +88,15 @@
 		AF5E5F0D22A4A898009D2EF0 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AF8BE4ED22A81017004181AF /* pcladmin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pcladmin.xcdatamodel; sourceTree = "<group>"; };
 		AF8BE4F422A94AA9004181AF /* EditRouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRouteCell.swift; sourceTree = "<group>"; };
+		AF8BE4F622A96928004181AF /* RouteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetailsViewController.swift; sourceTree = "<group>"; };
+		AF8BE4F822A96B2A004181AF /* LocationStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStatusCell.swift; sourceTree = "<group>"; };
+		AF8BE4FA22A99C91004181AF /* TimeCompare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCompare.swift; sourceTree = "<group>"; };
+		AF8BE4FC22AAA5D2004181AF /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
+		AF8BE4FE22AAA9EA004181AF /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		AF8BE50022AAC509004181AF /* DriverDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDataHandler.swift; sourceTree = "<group>"; };
+		AF8BE50222AAC7C6004181AF /* DriverLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLoginController.swift; sourceTree = "<group>"; };
+		AF8BE50422AAD08E004181AF /* DriverRouteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRouteController.swift; sourceTree = "<group>"; };
+		AF8BE50622AAE714004181AF /* DriverCustomerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCustomerController.swift; sourceTree = "<group>"; };
 		AF9309C522A6A533002A221A /* AddLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationCell.swift; sourceTree = "<group>"; };
 		AF9309C822A6AD66002A221A /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		AF9309CA22A6ADFE002A221A /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
@@ -117,6 +135,7 @@
 				AF52FC9A22A58B11005A3D61 /* LocationCell.swift */,
 				AF9309C522A6A533002A221A /* AddLocationCell.swift */,
 				AF8BE4F422A94AA9004181AF /* EditRouteCell.swift */,
+				AF8BE4F822A96B2A004181AF /* LocationStatusCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -189,6 +208,10 @@
 				AF52FC9322A57D5D005A3D61 /* DriversListViewController.swift */,
 				AF52FC9522A57D6E005A3D61 /* VehiclesListViewController.swift */,
 				AF52FC9C22A59BD2005A3D61 /* LocationsViewController.swift */,
+				AF8BE4F622A96928004181AF /* RouteDetailsViewController.swift */,
+				AF8BE50222AAC7C6004181AF /* DriverLoginController.swift */,
+				AF8BE50422AAD08E004181AF /* DriverRouteController.swift */,
+				AF8BE50622AAE714004181AF /* DriverCustomerController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +223,7 @@
 				AF5E5F0D22A4A898009D2EF0 /* Location.swift */,
 				AF9309CA22A6ADFE002A221A /* Driver.swift */,
 				AF9309CC22A6AE53002A221A /* Customer.swift */,
+				AF8BE4FE22AAA9EA004181AF /* MapAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -215,6 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				AF9309C822A6AD66002A221A /* DataHandler.swift */,
+				AF8BE4FA22A99C91004181AF /* TimeCompare.swift */,
+				AF8BE4FC22AAA5D2004181AF /* LocationHelper.swift */,
+				AF8BE50022AAC509004181AF /* DriverDataHandler.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -353,9 +380,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8BE4FD22AAA5D2004181AF /* LocationHelper.swift in Sources */,
+				AF8BE50522AAD08E004181AF /* DriverRouteController.swift in Sources */,
 				AF52FC9222A579AA005A3D61 /* RouteEditorViewController.swift in Sources */,
 				AF52FC8C22A55334005A3D61 /* ExistingRoutesViewController.swift in Sources */,
+				AF8BE50722AAE714004181AF /* DriverCustomerController.swift in Sources */,
+				AF8BE4F722A96928004181AF /* RouteDetailsViewController.swift in Sources */,
+				AF8BE4FB22A99C91004181AF /* TimeCompare.swift in Sources */,
 				AF5E5EDC22A467EC009D2EF0 /* HomeViewController.swift in Sources */,
+				AF8BE4F922A96B2A004181AF /* LocationStatusCell.swift in Sources */,
 				AF52FC8E22A55748005A3D61 /* DriverAddViewController.swift in Sources */,
 				AF9309C922A6AD66002A221A /* DataHandler.swift in Sources */,
 				AF5E5F0C22A4A86B009D2EF0 /* Route.swift in Sources */,
@@ -365,9 +398,12 @@
 				AF52FC9022A56629005A3D61 /* CustomerAddViewController.swift in Sources */,
 				AF9309CB22A6ADFE002A221A /* Driver.swift in Sources */,
 				AF5E5F0E22A4A898009D2EF0 /* Location.swift in Sources */,
+				AF8BE4FF22AAA9EA004181AF /* MapAnnotation.swift in Sources */,
 				AF8BE4F522A94AA9004181AF /* EditRouteCell.swift in Sources */,
 				AF52FC9622A57D6E005A3D61 /* VehiclesListViewController.swift in Sources */,
 				AF8BE4EE22A81017004181AF /* pcladmin.xcdatamodeld in Sources */,
+				AF8BE50122AAC509004181AF /* DriverDataHandler.swift in Sources */,
+				AF8BE50322AAC7C7004181AF /* DriverLoginController.swift in Sources */,
 				AF5E5EDA22A467EC009D2EF0 /* AppDelegate.swift in Sources */,
 				AF9309C622A6A533002A221A /* AddLocationCell.swift in Sources */,
 				AF9309CD22A6AE53002A221A /* Customer.swift in Sources */,

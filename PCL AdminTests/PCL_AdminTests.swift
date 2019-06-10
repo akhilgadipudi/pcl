@@ -19,9 +19,22 @@ class PCL_AdminTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testTimeCompare() {
+        let t1 = "10 : 00 AM"
+        let t2 = "12 : 10 PM"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh : mm a"
+        let dt1 = formatter.date(from: t1)
+        let dt2 = formatter.date(from: t2)
+        XCTAssertTrue(dt1!.time < dt2!.time)
+    }
+    
+    func testGetLocationCoordinates() {
+        let lat = 41.305848, lon = -83.422879
+        LocationHelper.getlatlong(address: "487 devon park drive, wayne", completion: {(xlat,xlon) in
+            XCTAssertEqual(lat, xlat)
+            XCTAssertEqual(lon, xlon)
+        })
     }
 
     func testPerformanceExample() {

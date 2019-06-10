@@ -4,7 +4,9 @@
         <attribute name="accountNum" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pickUpStatus" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pickUpTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="specimenCount" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
@@ -14,18 +16,18 @@
         <attribute name="firstName" attributeType="String" syncable="YES"/>
         <attribute name="lastName" attributeType="String" syncable="YES"/>
         <attribute name="phone" attributeType="String" syncable="YES"/>
-        <relationship name="routes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Route" inverseName="driver" inverseEntity="Route" syncable="YES"/>
+        <relationship name="route" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Route" inverseName="driver" inverseEntity="Route" syncable="YES"/>
     </entity>
     <entity name="Route" representedClassName="Route" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="num" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vehicle" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cutomers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Customer" inverseName="routes" inverseEntity="Customer" syncable="YES"/>
-        <relationship name="driver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Driver" inverseName="routes" inverseEntity="Driver" syncable="YES"/>
+        <relationship name="driver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Driver" inverseName="route" inverseEntity="Driver" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Driver" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="Customer" positionX="-54" positionY="18" width="128" height="165"/>
+        <element name="Customer" positionX="-54" positionY="18" width="128" height="195"/>
+        <element name="Driver" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Route" positionX="-36" positionY="72" width="128" height="120"/>
     </elements>
 </model>

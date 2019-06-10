@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-import  UIKit
+import UIKit
 
 class DataHandler{
     static func addDriver(_ driver: DriverModel){
@@ -19,8 +19,7 @@ class DataHandler{
         newDriver.firstName = driver.firstName
         newDriver.lastName = driver.lastName
         newDriver.phone = driver.phone
-        
-       appDelegate.saveContext()
+        appDelegate.saveContext()
     }
     
     static func getDrivers() -> [Driver]{
@@ -144,6 +143,13 @@ class DataHandler{
         appDelegate.saveContext()
     }
     
+    static func deleteRoute(route: Route){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        let managedContext = appDelegate.persistentContainer.viewContext
+        managedContext.delete(route)
+        appDelegate.saveContext()
+    }
+    
     static func getRoutes() -> [Route] {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return []
@@ -152,11 +158,37 @@ class DataHandler{
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Route")
         do {
             let routes = try managedContext.fetch(fetchRequest) as! [Route]
-            print(routes.count)
             return routes
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         return []
+    }
+    
+    static func resetAllData(){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entites = appDelegate.persistentContainer.managedObjectModel.entities
+        for entity in entites {
+            let fetch = NSFetchRequest<NSManagedObject>(entityName: entity.name!)
+            do {
+                let items = try managedContext.fetch(fetch)
+                for item in items {
+                    managedContext.delete(item)
+                }
+            } catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+        }
+        appDelegate.saveContext()
+    }
+    
+    static func getTotalSpecimenCount() -> Int{
+        var count = 0
+        let customers = getCustomers()
+        for cust in customers {
+            count = count + (Int(cust.specimenCount ?? "0") ?? 0)
+        }
+        return count
     }
 }
