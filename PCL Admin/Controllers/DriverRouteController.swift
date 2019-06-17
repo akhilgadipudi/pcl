@@ -20,6 +20,26 @@ class DriverRouteController: UITableViewController {
         super.viewWillAppear(animated)
         if driver != nil {
             customers = driver!.route?.cutomers?.allObjects as? [Customer] ?? []
+            customers.sort(by: { (c1, c2) in
+                let formatter = DateFormatter()
+                formatter.dateFormat = "hh : mm a"
+                let t1 = formatter.date(from: c1.pickUpTime!)
+                let t2 = formatter.date(from: c2.pickUpTime!)
+                return t1!.time < t2!.time
+            })
+            let currentTime = Date()
+            for cust in customers {
+                let custTime = cust.pickUpTime!
+                let formatter = DateFormatter()
+                formatter.dateFormat = "hh : mm a"
+                let custDT = formatter.date(from: custTime)
+                if (custDT!.time < currentTime.time) && (cust.pickUpStatus ?? CollectionStatus.other.rawValue == CollectionStatus.other.rawValue){
+                    driver?.route?.status = "Delayed"
+                    break
+                } else {
+                    driver?.route?.status = "On Time"
+                }
+            }
         }
     }
 

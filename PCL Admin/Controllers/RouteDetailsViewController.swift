@@ -35,6 +35,9 @@ class RouteDetailsViewController: UIViewController, UITableViewDelegate, UITable
             let t2 = formatter.date(from: c2.pickUpTime!)
             return t1!.time < t2!.time
         })
+        let currentTime = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh : mm a"
         for cust in customers {
             let addr = "\(cust.street ?? ""), \(cust.city ?? ""), \(cust.state ?? "") \(cust.zip ?? "")"
             LocationHelper.getlatlong(address: addr, completion: { lat , lon in
@@ -43,6 +46,13 @@ class RouteDetailsViewController: UIViewController, UITableViewDelegate, UITable
                 self.mapView.addAnnotation(point)
                 self.mapView.fitAll()
             })
+            let custDT = formatter.date(from: cust.pickUpTime!)
+            if (custDT!.time < currentTime.time) && (cust.pickUpStatus ?? CollectionStatus.other.rawValue == CollectionStatus.other.rawValue){
+                route?.status = "Delayed"
+                break
+            } else {
+                route?.status = "On Time"
+            }
         }
     }
     

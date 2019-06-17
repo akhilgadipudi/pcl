@@ -136,6 +136,17 @@ class RouteEditorViewController: UIViewController, UITableViewDataSource, UITabl
             present(presentingController, animated: true, completion: nil)
         }
     }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.row == routeLocations.count {return false}
+        else {return true}
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            routeLocations.remove(at: indexPath.row)
+            locationsTable.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     
     @IBAction func cancelButtonClicked(){
         self.dismiss(animated: true, completion: nil)

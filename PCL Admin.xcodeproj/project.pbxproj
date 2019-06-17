@@ -97,6 +97,7 @@
 		AF8BE50222AAC7C6004181AF /* DriverLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLoginController.swift; sourceTree = "<group>"; };
 		AF8BE50422AAD08E004181AF /* DriverRouteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRouteController.swift; sourceTree = "<group>"; };
 		AF8BE50622AAE714004181AF /* DriverCustomerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCustomerController.swift; sourceTree = "<group>"; };
+		AF8BE50822AFE0EA004181AF /* PCL Admin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PCL Admin.entitlements"; sourceTree = "<group>"; };
 		AF9309C522A6A533002A221A /* AddLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationCell.swift; sourceTree = "<group>"; };
 		AF9309C822A6AD66002A221A /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		AF9309CA22A6ADFE002A221A /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
@@ -163,6 +164,7 @@
 		AF5E5ED822A467EC009D2EF0 /* PCL Admin */ = {
 			isa = PBXGroup;
 			children = (
+				AF8BE50822AFE0EA004181AF /* PCL Admin.entitlements */,
 				AF8BE4EF22A81706004181AF /* Data */,
 				AF9309C722A6AD49002A221A /* Helpers */,
 				AF52FC9722A58AAC005A3D61 /* Cells */,
@@ -315,6 +317,17 @@
 					AF5E5ED522A467EC009D2EF0 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.ClassKit = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					AF5E5EE922A467ED009D2EF0 = {
 						CreatedOnToolsVersion = 10.1;
@@ -583,7 +596,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "PCL Admin/PCL Admin.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KKX8KEUZ6R;
 				INFOPLIST_FILE = "PCL Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -600,7 +615,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "PCL Admin/PCL Admin.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KKX8KEUZ6R;
 				INFOPLIST_FILE = "PCL Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

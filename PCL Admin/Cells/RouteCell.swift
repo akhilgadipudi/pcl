@@ -46,6 +46,9 @@ class RouteCell: UITableViewCell {
             specimenTotal =  specimenTotal + (Int(cust.specimenCount ?? "0") ?? 0)
         }
         specimenCount.text = "Speciment Count : \(specimenTotal)"
+        for dotView in locationStatusContainer.subviews {
+            dotView.removeFromSuperview()
+        }
         var x = 0
         for cust in customers {
             var dotImg: UIImage
@@ -70,6 +73,8 @@ class RouteCell: UITableViewCell {
             x = x + 30
             locationStatusContainer.addSubview(imgV)
         }
+        
+        routeStatus.text = route.status ?? "Status"
     }
 
 }

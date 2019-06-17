@@ -21,6 +21,7 @@
     <entity name="Route" representedClassName="Route" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="num" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vehicle" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cutomers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Customer" inverseName="routes" inverseEntity="Customer" syncable="YES"/>
         <relationship name="driver" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Driver" inverseName="route" inverseEntity="Driver" syncable="YES"/>
@@ -28,6 +29,6 @@
     <elements>
         <element name="Customer" positionX="-54" positionY="18" width="128" height="195"/>
         <element name="Driver" positionX="-63" positionY="-18" width="128" height="105"/>
-        <element name="Route" positionX="-36" positionY="72" width="128" height="120"/>
+        <element name="Route" positionX="-36" positionY="72" width="128" height="135"/>
     </elements>
 </model>

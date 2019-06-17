@@ -38,6 +38,27 @@ class LocationStatusCell: UITableViewCell {
         let specimen = (Int(customer.specimenCount ?? "0") ?? 0)
         details.text = "Speciment Count : \(specimen)"
         status.text = customer.pickUpStatus ?? CollectionStatus.other.rawValue
+        
+        let s = customer.pickUpStatus ?? CollectionStatus.other.rawValue
+        if s == CollectionStatus.notCollected.rawValue {
+            status.textColor = .red
+        } else if s == CollectionStatus.collected.rawValue {
+            status.textColor = .green
+        } else if s == CollectionStatus.missed.rawValue {
+            status.textColor = .yellow
+        } else if s == CollectionStatus.rescheduled.rawValue {
+            status.textColor = .blue
+        } else if s == CollectionStatus.closed.rawValue {
+            status.textColor = .gray
+        } else if s == CollectionStatus.other.rawValue {
+            status.textColor = .black
+        }
+        
+        if s != CollectionStatus.collected.rawValue {
+            statusImg.image = UIImage()
+        } else {
+            statusImg.image = UIImage(named: "tick")
+        }
     }
 
 }
